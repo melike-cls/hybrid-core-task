@@ -1,0 +1,65 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navItems {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navItem {
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.buttonContainer{
+    display: flex;
+    gap: 15px;
+}
+
+.signUp{
+    background-color: white;
+    color:black;
+    border-radius: 25px;
+    padding:8px 24px;
+    text-decoration: none;
+}
+.signIn{
+    border:1px solid white;
+    color:white;
+    border-radius: 25px;
+    padding:8px 24px;
+    text-decoration: none;
+}
+
+.signIn:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s
+}
+
+.signUp:hover{
+    background-color: transparent;
+    color: white;
+    border:1px solid white;
+    transition:0.3s;
+}
+
+.sideBarContainer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1400px) {
+  .navItems{
+    width: 55%;
+  }
+}
