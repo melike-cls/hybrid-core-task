@@ -1,3 +1,4 @@
+'use client'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
@@ -26,7 +27,7 @@ const Banner = ({pageName}) => {
           },
           "&::after": {
             backgroundImage: "url(/images/aboutUs.png)",
-            zIndex: 2, // Bu resim en üstte olacak
+            zIndex: 2, 
           },
         }}
       >
@@ -42,7 +43,7 @@ const Banner = ({pageName}) => {
             color: "white", 
             textAlign: "center", 
             maxWidth: "600px", 
-           p: 2, // Padding
+           p: 2, 
           
           }}
         >

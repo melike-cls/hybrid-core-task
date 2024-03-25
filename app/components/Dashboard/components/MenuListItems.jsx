@@ -1,5 +1,4 @@
  "use client"
-
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import StoreIcon from "@mui/icons-material/Store";
 import StarsIcon from "@mui/icons-material/Stars";
@@ -10,9 +9,9 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Typography, // Typography bileşenini import ediyoruz
+  Typography, 
 } from "@mui/material";
-import Link from "next/link"; // Link bileşenini next/link olarak alıyoruz
+import Link from "next/link"; 
 
 const icons = [
   {
@@ -58,7 +57,7 @@ const MenuListItems = () => {
             <Link href={item.url} passHref>
               <ListItemButton sx={iconStyle}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
-                {/* Typography bileşeni içinde ListItemText kullanarak altı çizgiyi kaldırıyoruz */}
+                
                 <ListItemText>
                   <Typography noWrap sx={{ textDecoration: "none" }}>
                     {item.title}

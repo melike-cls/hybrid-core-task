@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { AppBar, Toolbar, Typography, Grid, Box } from "@mui/material";
 import XIcon from "@mui/icons-material/X";
@@ -47,85 +48,167 @@ const Footer = () => {
       </Grid>
 
       {/* Footer Links Section */}
-      <Grid
-        container
-        sx={{ color: "white", backgroundColor: "#33576B", py: 3, px: 4 }}
-      >
-        {/* Publication Types */}
-        <Grid item sm={3} xs={12}>
-          <Typography>
-            <Typography variant="h6" gutterBottom>
-              List of Publication Types
+      <Box sx={{ backgroundColor: "#33576B", color: "white", py: 3, px: 4 }}>
+        <Grid
+          container
+          sx={{
+            color: "white",
+            backgroundColor: "#33576B",
+            py: 3,
+            px: 4,
+            justifyContent: "center",
+          }}
+        >
+          {/* Publication Types */}
+          <Grid item sm={3} xs={12}>
+            <Typography>
+              <Typography gutterBottom>
+                List of Publication Types
+                <Box
+                  component="div"
+                  sx={{
+                    width: "20%",
+                    height: "2px",
+                    bgcolor: "#F6AE2D",
+                    margin: "10px auto 5",
+                  }}
+                />
+              </Typography>
+              <Typography> Lorem ipsum</Typography>
+              <Typography> Lorem ipsum</Typography>
+              <Typography> Lorem ipsum</Typography>
+              <Typography> Lorem ipsum</Typography>
+              <Typography> Lorem ipsum</Typography>
+              <Typography> Lorem ipsum</Typography>
             </Typography>
-            <Typography> Lorem ipsum</Typography>
-            <Typography> Lorem ipsum</Typography>
-            <Typography> Lorem ipsum</Typography>
-            <Typography> Lorem ipsum</Typography>
-            <Typography> Lorem ipsum</Typography>
-            <Typography> Lorem ipsum</Typography>
-          </Typography>
-        </Grid>
+          </Grid>
 
-        {/* Publication Themes */}
-        <Grid item sm={3} xs={12}>
-          <Typography>
-            <Typography variant="h6" gutterBottom>
-              List of Publication Themes
+          {/* Publication Themes */}
+          <Grid item sm={3} xs={12}>
+            <Typography>
+              <Typography gutterBottom>
+                List of Publication Themes
+                <Box
+                  component="div"
+                  sx={{
+                    width: "20%",
+                    height: "2px",
+                    bgcolor: "#F6AE2D",
+                    margin: "10px auto 5",
+                  }}
+                />
+              </Typography>
+              <Typography> Lorem ipsum</Typography>
+              <Typography> Lorem ipsum</Typography>
+              <Typography> Lorem ipsum</Typography>
+              <Typography> Lorem ipsum</Typography>
+              <Typography> Lorem ipsum</Typography>
+              <Typography> Lorem ipsum</Typography>
             </Typography>
-            <Typography> Lorem ipsum</Typography>
-            <Typography> Lorem ipsum</Typography>
-            <Typography> Lorem ipsum</Typography>
-            <Typography> Lorem ipsum</Typography>
-            <Typography> Lorem ipsum</Typography>
-            <Typography> Lorem ipsum</Typography>
-          </Typography>
-        </Grid>
+          </Grid>
 
-        {/* About Us Pages */}
-        <Grid item sm={3} xs={12}>
-          <Typography>
-            <Typography variant="h6" gutterBottom>
-              About Us Pages
+          {/* About Us Pages */}
+          <Grid item sm={3} xs={12}>
+            <Typography>
+              <Typography gutterBottom>
+                About Us Pages
+                <Box
+                  component="div"
+                  sx={{
+                    width: "20%",
+                    height: "2px",
+                    bgcolor: "#F6AE2D",
+                    margin: "10px auto 5",
+                  }}
+                />
+              </Typography>
+              <Typography>Who we are?</Typography>
+              <Typography>What we do?</Typography>
+              <Typography>How we work?</Typography>
+              <Typography>Events & Activities</Typography>
+              <Typography> Lorem ipsum</Typography>
+              <Typography>Lorem ipsum</Typography>
             </Typography>
-            <Typography>Who we are?</Typography>
-            <Typography>What we do?</Typography>
-            <Typography>How we work?</Typography>
-            <Typography>Events & Activities</Typography>
-            <Typography> Lorem ipsum</Typography>
-            <Typography>Lorem ipsum</Typography>
-          </Typography>
-          {/* Add more links here */}
+            {/* Add more links here */}
+          </Grid>
+
+          {/* Communication Department */}
+          <Grid item sm={3} xs={12}>
+            <Typography gutterBottom>
+              Communication Department
+              <Box
+                component="div"
+                sx={{
+                  width: "20%",
+                  height: "2px",
+                  bgcolor: "#F6AE2D",
+                  margin: "10px auto 5",
+                }}
+              />
+            </Typography>
+            <Typography>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et
+            </Typography>
+
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+              <Box
+                sx={{
+                  borderRadius: "50%",
+                  width: 36,
+                  height: 36,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  bgcolor: "socialIconBg",
+                  "&:hover": { bgcolor: "socialIconHoverBg" },
+                }}
+              >
+                <LinkedInIcon style={{ color: "#ffffff" }} />
+              </Box>
+              <Box
+                sx={{
+                  borderRadius: "50%",
+                  width: 36,
+                  height: 36,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  bgcolor: "socialIconBg",
+                  "&:hover": { bgcolor: "socialIconHoverBg" },
+                }}
+              >
+               
+                <XIcon style={{ color: "#ffffff" }} />
+              </Box>
+            </Box>
+          </Grid>
         </Grid>
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: "137.5",
+            left: "50%",
+            width: "calc(100% - 35%)",
+            height: "1px",
+            bgcolor: "#E9E9EA",
+            transform: "translateX(-50%)",
+          }}
+        />
 
-        {/* Communication Department */}
-        <Grid item sm={3} xs={12}>
-          <Typography variant="h6" gutterBottom>
-            Communication Department
-          </Typography>
-          <Typography>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et
-          </Typography>
-
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <LinkedInIcon style={{ color: "#ffffff" }} />
-            <XIcon style={{ color: "#ffffff" }} />
-          </Box>
-        </Grid>
-      </Grid>
-
-      {/* Footer Bottom Bar */}
-      <AppBar
-        position="static"
-        elevation={0}
-        sx={{ backgroundColor: "#33576B" }}
-      >
-        <Toolbar sx={{ justifyContent: "center", minHeight: 20 }}>
-          <Typography variant="caption" color="white">
-            The EuroHub4Sino project. All rights reserved.
-          </Typography>
-        </Toolbar>
-      </AppBar>
+        {/* Footer Bottom Bar */}
+        <AppBar
+          position="static"
+          elevation={0}
+          sx={{ backgroundColor: "#33576B" }}
+        >
+          <Toolbar sx={{ justifyContent: "center", minHeight: 20 }}>
+            <Typography variant="caption" color="white">
+              © The EuroHub4Sino project. All rights reserved.
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </Box>
     </>
   );
 };

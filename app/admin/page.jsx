@@ -3,17 +3,17 @@ import React, { useState } from "react";
 import { Container, Button, Dialog, TextField } from "@mui/material";
 import Layout from "../layout";
 import axios from "axios"
+import { blueGrey } from "@mui/material/colors";
 
 export default function Admin() {
   const [newComponent, setNewComponent] = useState({
-    // Default values for the new component
-    // You may need to adjust this based on your ComponentType schema
+    
     title: "",
-    // Add more fields as needed
+   
   });
   const [openDialog, setOpenDialog] = useState(false);
 
-  // Function to handle input changes for the new component
+ 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewComponent((prevComponent) => ({
@@ -22,7 +22,7 @@ export default function Admin() {
     }));
   };
 
-  // Function to handle form submission and create a new component
+  
   const handleSubmit = async () => {
     try {
       const response = await axios.get(
@@ -61,23 +61,23 @@ export default function Admin() {
       if (!response.ok) {
         throw new Error("Failed to create component");
       }
-      // Clear the form fields after successful creation
+     
       setNewComponent({
         title: "",
-        // Reset other fields as needed
+        
       });
       setOpenDialog(false);
-      // Optionally, you can fetch the updated list of modules here to refresh the UI
+      
     } catch (error) {
       console.error("Error creating component:", error);
-      // Handle error state as needed
+      
     }
   };
 
   return (
     <Layout useLayout={false}>
-      <Container maxWidth="lg">
-        <Button onClick={() => setOpenDialog(true)}>
+      <Container maxWidth="lg" sx={{ display:'flex', justifyContent:'center', pb:50 }}>
+        <Button variant="contained" onClick={() => setOpenDialog(true)} sx={{backgroundColor:blueGrey[900]}} >
           Create New Component
         </Button>
         <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
@@ -89,7 +89,7 @@ export default function Admin() {
               onChange={handleInputChange}
               fullWidth
             />
-            {/* Add more fields as needed */}
+            
             <Button onClick={handleSubmit}>Create</Button>
           </Container>
         </Dialog>

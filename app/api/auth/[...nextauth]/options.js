@@ -22,7 +22,7 @@ export const options = {
         },
       },
       async authorize(credentials) {
-        const user = { id: "1", name: "Melike", password: "zafer" };
+        const user = { id: "1", name: "Melike", password: "123456" };
 
         if (
           credentials?.username === user.name &&
@@ -38,13 +38,13 @@ export const options = {
   callbacks: {
     async signIn(user, account, profile) {
       if (user) {
-        // Eğer kullanıcı giriş yaptıysa
-        return "/admin"; // Giriş yaptıktan sonra /admin sayfasına yönlendir
+        
+        return "/admin"; 
       } else if (account.provider === "credentials") {
-        // Eğer giriş credentials (kullanıcı adı/şifre) ile yapıldıysa
-        return "/admin"; // Giriş yaptıktan sonra /admin sayfasına yönlendir
+        
+        return "/admin"; 
       } else {
-        // Diğer giriş yöntemleri için varsayılan olarak '/' sayfasına yönlendir
+        
         return "/";
       }
     },

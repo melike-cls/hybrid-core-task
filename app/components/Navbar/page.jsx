@@ -13,7 +13,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { navItems } from "@/app/constants/navItems";
 import styles from "./styles.module.css";
-import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -43,7 +42,6 @@ const Navbar = () => {
 
   const DrawerContent = () => (
     <div>
-      {/* Yönlendirme Linkleri */}
       {navItems.map((item) => (
         <Link key={item.id} href={item.link} passHref>
           <Button
@@ -144,13 +142,27 @@ const Navbar = () => {
                         MenuListProps={{
                           "aria-labelledby": "basic-button",
                         }}
+                        sx={{
+                          ".MuiPaper-root": {
+                            
+                            bgcolor: "white",
+                            borderRadius: "8px",
+                            boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+                            display: "flex",
+                            flexDirection: "column",
+                          },
+                        }}
                       >
-                        <Link href="/aboutUs/WhatWeDo" passHref>
-                          <MenuItem onClick={handleClose}>What We Do</MenuItem>
-                        </Link>
-                        <Link href="/aboutUs/WhoWeAre" passHref>
-                          <MenuItem onClick={handleClose}>Who We Are</MenuItem>
-                        </Link>
+                        <MenuItem onClick={handleClose}>
+                          <Link href="/aboutUs/WhatWeDo" passHref>
+                            What We Do
+                          </Link>
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                          <Link href="/aboutUs/WhoWeAre" passHref>
+                            Who We Are
+                          </Link>
+                        </MenuItem>
                       </Menu>
                     </>
                   ) : (

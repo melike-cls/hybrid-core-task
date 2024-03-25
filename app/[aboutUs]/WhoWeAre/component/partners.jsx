@@ -1,9 +1,10 @@
+'use client'
 import React from 'react';
 import { Container, Typography, Grid, Paper, Box } from '@mui/material';
 import Image from 'next/image';
 
 const Partners = () => {
-  // Logolarınızın olduğu bir array
+  
   const logos = [
     { src: '/images/logo1.png', alt: 'Logo 1', width: 322, height: 186 },
     { src: '/images/logo2.png', alt: 'Logo 2', width: 311, height: 79 },
@@ -17,7 +18,7 @@ const Partners = () => {
   ];
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" sx={{mb:'200px' }}>
       <Typography variant="h4" align="center" gutterBottom sx={{ mt: '137px', mb:'46px' }} >
         Consortium Partners
       </Typography>
@@ -46,12 +47,12 @@ const Partners = () => {
  <Box
         sx={{
           position: 'absolute',
-          bottom: '137.5', // Çizginin dikey konumunu ayarlayın
-          left: '50%', // Çizginin yatay başlangıç noktasını ayarlayın, bu değer ilk logonun sol hizasına denk gelmeli
-          width: 'calc(100% - 35%)', // Çizginin genişliği, bu değer son logonun sağına denk gelmeli
-          height: '2px', // Çizginin kalınlığı
-          bgcolor: '#F6AE2D', // Çizginin rengi
-          transform: 'translateX(-50%)', // Çizgiyi yatayda ortalamak için
+          bottom: '137.5', 
+          left: '50%', 
+          width: 'calc(100% - 35%)', 
+          height: '2px', 
+          bgcolor: '#F6AE2D', 
+          transform: 'translateX(-50%)', 
         }}
       />
 

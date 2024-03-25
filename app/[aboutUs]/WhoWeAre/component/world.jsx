@@ -1,5 +1,4 @@
-import { Box, Card, CardMedia } from "@mui/material";
-import Image from "next/image";
+'use client'
 import React from "react";
 
 const World = () => {

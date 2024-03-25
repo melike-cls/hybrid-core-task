@@ -45,51 +45,54 @@ const objectives = [
     description: 'The sustainable business model (KER4) requires interdependent key exploitable results: The inclusive and diverse network (KER2) of independent European China experts will make the most of the EH4S platform (KER1) for collaborative (policy) research and activities (KER3)',
   },
  
-  // Diğer objective kartlarınızı buraya ekleyin
+ 
 ];
 
-// `Objectives` bölümü için stil ayarlamaları
+
 const objectiveStyles = {
   paperContainer: {
-    padding: '48px', // İç boşluğu ayarlayın
-    margin: '10px', // Dış boşluğu ayarlayın
-    textAlign: 'left', // Metni ortala
-    boxShadow: '0px 6px 10px rgba(0, 0, 0, 0.1)', // Gölgelendirmeyi ayarlayın
-    borderRadius: '10px', // Köşe yuvarlaklığını ayarlayın
+    padding: '48px',
+    margin: '10px', 
+    textAlign: 'left', 
+    boxShadow: '0px 6px 10px rgba(0, 0, 0, 0.1)',
+    borderRadius: '10px', 
   },
   icon: {
-    width: '50px', // İkon genişliği
-    height: '50px', // İkon yüksekliği
-    marginBottom: '15px', // İkon alt boşluğu
+    width: '50px', 
+    height: '50px', 
+    marginBottom: '15px', 
   },
   title: {
-    fontWeight: 'bold', // Başlık kalınlığı
-    color: '#333', // Başlık rengi
+    fontWeight: 'bold', 
+    color: '#333', 
   },
   description: {
-    color: '#666', // Açıklama metni rengi
+    color: '#666', 
   }
 };
 
 const WhatWeDo = () => {
   return (
-    <Layout useLayout={true}>
+    <>
     <div >
     {/* aboutus bölümü */}
       <Banner pageName="What We Do" />
 
       {/* What We Do Bölümü */}
       <Box sx={{ paddingY: 8, textAlign: "center"}}>
+      <Typography variant="subtitle1" gutterBottom color="#F6AE2D">
+        Lorem ipsum
+        </Typography>
         <Typography variant="h3" gutterBottom>
           What we do
         </Typography>
 
         <Grid container justifyContent="center">
           <Grid item xs={12} md={6} lg={4}>
-            {/* Resim */}
-            <Paper elevation={3} sx={{ mb: 4 }}>
+            
+            <Paper elevation={0} sx={{ mb: 4 }}>
               <img
-                src="/images/image1.png" 
+                src="/images/wwdo.png" 
                 alt="What We Do"
                 style={{ width: "100%", height: "auto" }}
               />
@@ -97,15 +100,19 @@ const WhatWeDo = () => {
 
             {/* Metin */}
             <Typography variant="body1" paragraph textAlign={"left"}>
-              China is a key global actor and a leading economic and
-              technological power. China’s increasing relevance in the...
+            China is a key global actor and a leading economic and technological power.
+             China’s increasing relevance in the geopolitical system, its various 
+             specificities, complexities, and goals as well as its rapid evolution and 
+             new policy directions pose challenge to the EU’s capacity to better understand 
+             contemporary China. Besides, the EU needs to get to know and understand China on its own terms: not through the lens of other external sources but from its own European perspective.  
             </Typography>
             <Typography variant="body1" paragraph textAlign={"left"}>
-              However, the European level expertise on contemporary China is
-              often fragmented and difficult to access. In this regard, it is
-              essential to connect established and emerging knowledge nodes as
-              well as gathering, categorising, and mainstreaming their work on a
-              publicly accessible platform.
+            However, the European level expertise on contemporary China is often fragmented 
+            and difficult to access. In this regard, it is essential to connect established
+             and emerging knowledge nodes as well as gathering, categorising,
+              and mainstreaming their work on a publicly accessible platform. 
+              This approach will break down siloes and provide policy-makers, 
+              researchers, businesses, and civil society with the necessary knowledge to develop a comprehensive understanding of the various aspects that define contemporary China. 
             </Typography>
             <Typography variant="body1" paragraph textAlign={"left"}>
               To address these challenges, EuroHub4Sino is funded by the
@@ -140,7 +147,7 @@ const WhatWeDo = () => {
         <Grid container spacing={4} justifyContent="center">
         {/* Sol taraftaki büyük kutu */}
         <Grid item xs={12} md={5} lg={4} sx={{ ml:5, mt:10, p:10}}>
-              {/* Yüksekliği diğer kutulara göre ayarlamak için marginTop kullanılıyor */}
+              
               <Paper elevation={3} sx={{ textAlign: 'left', boxShadow: '0px 6px 10px rgba(0, 0, 0, 0.1)', borderRadius: '10px', mt:30, p:10}}>
                 <Typography variant="subtitle1" gutterBottom component="div" sx={{ color: '#f6ae2d', fontWeight: 'bold' }}>
                   Lorem ipsum
@@ -154,12 +161,12 @@ const WhatWeDo = () => {
                 dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris re
                 </Typography>
-                {/* Diğer içerikler burada devam edebilir... */}
+                
               </Paper>
             </Grid>
 
           {/* Sağ taraftaki dört kutu */}
-          {/* İlk iki kutu için container */}
+          {/* İlk iki kutu için  */}
           <Grid item xs={12} md={6} >
             <Grid container spacing={2} >
               {objectives.slice(0, 2).map((objective, index) => (
@@ -197,9 +204,8 @@ const WhatWeDo = () => {
       </Box>
 
 
-
     </div>
-    </Layout>
+    </>
   );
 };
 
